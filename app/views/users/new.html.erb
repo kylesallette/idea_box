@@ -7,12 +7,18 @@
   <body>
     <div class="form">
       <h3>Sign up here!</h3>
-        <div class="field-wrap">
+        <div class="wrapper">
           <%= form_for @user do |f| %>
-          <%= f.label :username %>
-          <%= f.text_field :name, placeholder: "new user name*" %>
-          <p><%= f.label :password %></p>
-          <%= f.password_field :password, placeholder: "Choose a Password*" %><br>
+          <%= f.label :Username %>
+          <%= f.text_field :name, placeholder: "new user name.*" %>
+          <br>
+          <%= f.label :Email %>
+          <%= f.text_field :email, placeholder: "please enter your email.*" %>
+          <br>
+          <%= f.label :password %>
+          <%= f.password_field :password, placeholder: "Choose a Password.*" %><br>
+          <br>
+
           <p>* required field</p>
             <%= f.submit "Create User", class: "sub-btn" %>
             <% end %>

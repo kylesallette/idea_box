@@ -1,3 +1,5 @@
+<div class="title">
+<h1> Welcome, <%= @user.name %>!</h1><br/>
+</div>
 
-
-  <ul><%= @user.name %></ul>
+<%= button_to "Add a New Idea", new_user_idea_path(@user), method: "get" %><br/>
