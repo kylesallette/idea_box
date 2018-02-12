@@ -20,6 +20,7 @@
             <br>
             <p>* required field</p>
               <%= f.submit "Create User", class: "sub-btn" %>
+              <%= flash[:success].html_safe %>
               <% end %>
             </div>
           </div>
