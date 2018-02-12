@@ -18,7 +18,7 @@ require 'rails_helper'
 
   describe "user is taken to login dashboard" do
     it "user sees signup link" do
-      visit '/'
+    visit '/'
 
       find_link('Log In').visible?
     end

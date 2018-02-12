@@ -11,7 +11,7 @@ require 'rails_helper'
 
     describe "user clicks sign up"  do
       it "user sees signup form"  do
-      visit '/'
+        visit '/'
 
 
      click_on("Sign Up")
