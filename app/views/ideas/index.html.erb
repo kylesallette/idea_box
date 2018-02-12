@@ -1,3 +1,4 @@
-  <% @user.ideas do |idea| %>
-  <ul><%= idea.name %></ul>
-  <% end %>
+<% @ideas.each do |idea| %>
+<%= idea.title %>
+<%= idea.body %>
+<% end %>
