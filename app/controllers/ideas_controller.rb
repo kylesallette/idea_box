@@ -9,10 +9,8 @@ class IdeasController < ApplicationController
     @user = User.find(params[:user_id])
     @idea = @user.ideas.create(idea_params)
 
-      redirect_to user_ideas_path(@user)
-
-    end
-
+    redirect_to user_ideas_path(@user)
+  end
 
   def index
     @user = User.find(params[:user_id])
@@ -21,18 +19,17 @@ class IdeasController < ApplicationController
 
   def edit
     @user = User.find(params[:user_id])
-
   end
 
- def show
-   @idea = @user.ideas.find(params[:id])
- end
+  def show
+   @user = User.find(params[:user_id])
+   @idea = Idea.find(params[:id])
+  end
 
- def destroy
-  @idea.destroy(params[:id])
-  redirect_to user_ideas_path(params[:user_id])
- end
-
+  def destroy
+    @idea.destroy(params[:id])
+    redirect_to user_ideas_path(params[:user_id])
+  end
 
   private
 
