@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create New User</title>
+  </head>
+  <body>
+    <div class="form">
+      <h3>Sign up here!</h3>
+        <div class="field-wrap">
+          <%= form_for @user do |f| %>
+          <%= f.label :username %>
+          <%= f.text_field :name, placeholder: "new user name*" %>
+          <p><%= f.label :password %></p>
+          <%= f.password_field :password, placeholder: "Choose a Password*" %><br>
+          <p>* required field</p>
+            <%= f.submit "Create User", class: "sub-btn" %>
+            <% end %>
+        </div>
+    </div>
+
+  </body>
+</html>
