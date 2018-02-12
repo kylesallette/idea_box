@@ -1,5 +1,5 @@
 class Idea < ApplicationRecord
-  validates :name, :body, presence: true
+  validates :name, :content, presence: true
     belongs_to :user
 
 end
