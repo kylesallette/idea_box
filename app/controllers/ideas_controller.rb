@@ -2,29 +2,37 @@ class IdeasController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @idea = Idea.new()
+    @idea = @user.ideas.new
   end
 
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
-    if @idea.save
-      flash[:success] = "#{@idea.name} added !"
-      redirect_to user_idea_path(@idea, @user)
-    else
-      render :new
+
+      redirect_to user_ideas_path(@user)
+
     end
-  end
+
 
   def index
     @user = User.find(params[:user_id])
-    @ideas = Idea.all
- end
+    @ideas = @user.ideas
+  end
+
+  def edit
+    @user = User.find(params[:user_id])
+
+  end
 
  def show
-   @user = User.find(params[:id])
-   @idea = Idea.find(params[:user_id])
+   @idea = @user.ideas.find(params[:id])
  end
+
+ def destroy
+  @idea.destroy(params[:id])
+  redirect_to user_ideas_path(params[:user_id])
+ end
+
 
   private
 
