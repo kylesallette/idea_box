@@ -7,7 +7,7 @@ class IdeasController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @idea = @user.ideas.new(idea_params)
+    @idea = @user.ideas.create(idea_params)
 
       redirect_to user_ideas_path(@user)
 
