@@ -1,11 +1,10 @@
+<div class="form">
+    <div class="wrapper">
+      <%= form_for [@user, @idea] do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "Idea Title*" %><br><br>
 
-<%= form_for [@user, @idea] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-
-
-  <%= f.submit %>
+        <%= f.label :content %>
+        <%= f.text_area :content, placeholder: "Idea*" %><br><br>
+  <%= f.submit class: "sub-btn" %>
 <% end %>
