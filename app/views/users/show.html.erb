@@ -10,10 +10,12 @@
 <div class="title">
 <h1> Welcome, <%= @user.name %>!</h1><br/>
 </div>
-  <div class="btn btn-info">
-<%= link_to "Log Out", logout_path, method: :delete %>
-</div>
 <%= button_to "Add a New Idea", new_user_idea_path(@user), method: "get" %><br/>
 <%= button_to "View all ideas", user_ideas_path(@user), method: "get" %><br/>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
+<%= link_to "Log Out", logout_path, method: :delete %>
+</div>
+</span>
 </div>
 </html>

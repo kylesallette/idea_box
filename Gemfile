@@ -40,6 +40,7 @@ group :development, :test do
   gem 'pry'
   gem 'shoulda-matchers', '~>3.1'
   gem 'bcrypt', '~>3.1.7'
+  gem "paperclip", "~> 5.2.1"
 end
 
 group :development do

@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title></title>
   </head>
   <body>
@@ -11,8 +10,16 @@
 <% @ideas.each do |idea| %>
 <h2><%= link_to idea.name, user_idea_path(@user, idea) %></h2>
 <br>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
 <%= link_to "Delete",  user_idea_path(@user, idea), method: "delete" %>
+</div>
+</span>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
 <%= link_to "Edit", edit_user_idea_path(@user, idea), method: "get" %>
+</div>
+</span>
 
 <br>
 <% end %>
