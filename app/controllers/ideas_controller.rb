@@ -27,9 +27,14 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea.destroy(params[:id])
+    Idea.destroy(params[:id])
     redirect_to user_ideas_path(params[:user_id])
   end
+
+  def update
+    @idea.update(idea_params)
+    redirect_to user_idea_path(@user, @idea)
+  end 
 
   private
 
