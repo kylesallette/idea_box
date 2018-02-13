@@ -1,3 +1,5 @@
 
 <h3><%= @idea.name %></h3>
 <%= @idea.content %><br>
+
+<%= button_to "Back to ideas", user_ideas_path(@user), method: "get" %><br/>
