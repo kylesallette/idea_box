@@ -19,6 +19,7 @@ class IdeasController < ApplicationController
 
   def edit
     @user = User.find(params[:user_id])
+    @idea = Idea.find(params[:id])
   end
 
   def show
@@ -32,9 +33,11 @@ class IdeasController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:user_id])
+    @idea = Idea.find(params[:id])
     @idea.update(idea_params)
     redirect_to user_idea_path(@user, @idea)
-  end 
+  end
 
   private
 
