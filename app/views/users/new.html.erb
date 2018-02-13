@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Create New User</title>
-    </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
     <body>
       <div class="form">
         <h3>Sign up here!</h3>
@@ -19,7 +20,9 @@
             <%= f.password_field :password, placeholder: "Choose a Password.*" %><br>
             <br>
             <p>* required field</p>
+              <div class="btn btn-info">
               <%= f.submit "Create User", class: "sub-btn" %>
+            </div>
               <% end %>
             </div>
           </div>

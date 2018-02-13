@@ -1,7 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title></title>
+  </head>
+  <body>
+
 <% @ideas.each do |idea| %>
-<%= link_to idea.name, user_idea_path(@user, idea) %>
+<h2><%= link_to idea.name, user_idea_path(@user, idea) %></h2>
 <br>
-<%= button_to "Delete", user_idea_path(@user, idea), method: :DELETE %>
+<%= link_to "Delete",  user_idea_path(@user, idea), method: "delete" %>
 <%= link_to "Edit", edit_user_idea_path(@user, idea), method: "get" %>
+
 <br>
 <% end %>
+  <div class="btn btn-info">
+<%= button_to "Home", user_path(@user), method: "get" %><br/>
+</div>
+</body>
+</html>
