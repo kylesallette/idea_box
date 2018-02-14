@@ -742,7 +742,7 @@
 .button-raised.button-primary {
   border-color: #088ef0;
   background: -webkit-gradient(linear, left top, left bottom, from(#34a5f8), to(#088ef0));
-  background: linear-gradient(#34a5f8, #088ef0); }
+  background: linear-gradient(#37a69b, #37a69b); }
   .button-raised.button-primary:hover, .button-raised.button-primary:focus {
     background: -webkit-gradient(linear, left top, left bottom, from(#42abf8), to(#0888e6));
     background: linear-gradient(top, #42abf8, #0888e6); }
@@ -1384,7 +1384,8 @@
   display: inline-block;
   padding: 9px;
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(white));
-  background: linear-gradient(#f2f2f2, white);
+  background: linear-gradient(#f2f2f2, black);
+margin-top: 50px;
   border-radius: 200px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04); }
