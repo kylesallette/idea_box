@@ -16,7 +16,12 @@
         <%= f.label :content %>
         <%= f.text_area :content, placeholder: "Idea*" %><br>
         <%= f.collection_select(:categories_id, Category.all, :id, :title) %>
+      
           <div class="btn btn-info">
+            <% Image.all.each do |image| %>
+            <%= image_tag(image.url, size: "150x150")%>
+            <%= check_box_tag("image_url[]",image.id) %>
+            <% end %>
   <%= f.submit class: "sub-btn" %>
 </div>
 <% end %>
