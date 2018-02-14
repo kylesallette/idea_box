@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+
+<% @categories.each do |category| %>
+<h2><%= category.title %></h2>
+<br>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
+<%= link_to "Delete",   admin_category_path(category), method: "delete" %>
+</div>
+</span>
+<br>
+<% end %>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
+<%= link_to "Add new category.",  new_admin_category_path(@category), method: "get" %>
+</div>
+</span>
+  <div class="btn btn-info">
+
+</div>
+</body>
+</html>

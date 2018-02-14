@@ -14,8 +14,15 @@
 <%= button_to "View all ideas", user_ideas_path(@user), method: "get" %><br/>
 <span class="button-wrap">
 <div class="button button-raised button-primary button-pill">
-<%= link_to "Log Out", logout_path, method: :delete %>
+<%= link_to "Add/Delete Category", admin_categories_path if current_user.admin? %>
 </div>
 </span>
+<span class="button-wrap">
+<div class="button button-raised button-primary button-pill">
+<%= link_to "Log Out", logout_path, method: :delete %>
+
+</div>
+</span>
+
 </div>
 </html>
