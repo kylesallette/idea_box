@@ -4,23 +4,23 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <title></title>
   </head>
+  <header>
+  <img class=""src="https://i.imgur.com/w4o2Kqt.jpg" alt="banner" height="300px" width="100%">
+</header>
   <body>
-<div class="form">
+<div class="login animated slideInUp">
   <h3>Login to Idea Box</h3>
-    <div class="wrapper">
       <%= form_tag login_path do %>
       <%= label_tag :username %>
       <%= text_field_tag :name,nil, placeholder: "User Name*" %>
-
       <p><%= label_tag :password %></p>
       <%= password_field_tag :password, nil, placeholder: "Password*" %>
-         <div class="btn btn-info">
       <%= submit_tag "Log In", class: "sub-btn" %>
-    </div>
       <% end %>
     </div>
-  </div>
 </body>
 </html>

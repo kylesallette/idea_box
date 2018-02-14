@@ -4,20 +4,26 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="css/buttons.css">
+   <link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <title></title>
   </head>
+  <header>
+  <img class="animated bounceInDown"src="https://i.imgur.com/w4o2Kqt.jpg" alt="banner" height="300px" width="100%">
+</header>
   <body>
-    <div class="form">
-      <h3>Welcome to my wonderful Idea Box!</h3>
+    <div class="login animated slideInUp">
         <span class="button-wrap">
       <div class="button button-raised button-primary button-pill">
      <%= link_to "Sign Up", new_user_path %>
     </div>
       </span>
+      <br>
       <span class="button-wrap">
     <div class="button button-raised button-primary button-pill">
       <%= link_to "Log In", login_path %>
     </div>
+    <div class"shadow"></div>
   </span>
   </body>
 </html>
