@@ -15,8 +15,9 @@
     <div id="right"></div>
     <div id="top"></div>
     <div id="bottom"></div>
-    <div class="login">
+    <div class="flex-container">
       <% @ideas.each do |idea| %>
+      <div class="ideas">
       <h2><%= link_to idea.name, user_idea_path(@user, idea) %></h2>
       <br>
       <span class="button-wrap">
@@ -29,7 +30,10 @@
           <%= link_to "Edit", edit_user_idea_path(@user, idea), method: "get" %>
         </div>
       </span>
+
       <br>
       <% end %>
+    </div>
+
  </body>
 </html>
