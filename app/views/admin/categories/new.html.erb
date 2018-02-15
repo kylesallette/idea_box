@@ -12,11 +12,21 @@
     <div id="right"></div>
     <div id="top"></div>
     <div id="bottom"></div>
-    <div class="login">
+    <div class="login-5">
       <div class="wrapper">
         <%= form_for [:admin, @category] do |f| %>
         <%= f.label :title %>
         <%= f.text_field :title, placeholder: "new category*" %><br>
+        <%= f.submit class: "sub-btn" %>
+      </div>
+      <% end %>
+      <br>
+      <div class="wrapper">
+        <%= form_for [:admin, @image] do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "name for image*" %><br>
+        <%= f.label :url %>
+        <%= f.text_field :url, placeholder: "Image url*" %><br>
         <%= f.submit class: "sub-btn" %>
       </div>
       <% end %>

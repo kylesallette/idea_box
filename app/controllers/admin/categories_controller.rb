@@ -3,6 +3,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def index
     @categories = Category.all
+    @image = Image.all
   end
 
   def destroy
@@ -17,6 +18,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def new
     @category = Category.new
+    @image = Image.new
   end
 
   def create
