@@ -3,7 +3,7 @@ html { height: 100% }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,35,40,1) 100%), url('http://i.minus.com/io97fW9I0NqJq.png') }
 .login {
-  background: #eceeee;
+  background: #36a58d;
   border: 1px solid #42464b;
   border-radius: 6px;
   height: 257px;
@@ -13,7 +13,7 @@ body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,3
   text-align: center;
 }
 .login-2 {
-  background: #eceeee;
+  background: #36a58d;
   border: 1px solid #42464b;
   border-radius: 6px;
   height: 400px;
@@ -22,6 +22,31 @@ body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,3
   align-items: center;
   text-align: center;
 }
+
+.login-3{
+  background: #36a58d;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 400px;
+  margin: 20px auto 0;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+}
+
+.login-4 {
+
+  background: #36a58d;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 400px;
+  margin: 20px auto 0;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+
+}
+
 .login h1 {
   background-image: linear-gradient(top, #f1f3f3, #d4dae0);
   border-bottom: 1px solid #a6abaf;
@@ -62,7 +87,7 @@ input[type="password"]:focus, input[type="text"]:focus {
 input[type="checkbox"] {
   cursor: pointer;
   height: 16px;
-  opacity: 0;
+
   position: relative;
   width: 64px;
 }
@@ -139,4 +164,78 @@ label{
   text-align: center;
   margin-right: 0.5em;
   display: inline-block;
+}
+.img-circular{
+  margin: 0.5em;
+ width: 150px;
+ height: 150px;
+ background-size: cover;
+ display: inline;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}
+
+#top, #bottom, #left, #right {
+	background: #36a58d;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+    .anchored{
+       display:block;
+       margin-left:auto;
+       margin-right:auto;
+       width:<whatever your banner/desired width is>;
+    }
+body {
+  background-color:#e3e4e5;
+}
+
+h3 {
+
+   font-family: courier;
+ }
+
+ h2 {
+
+    font-family: courier;
+    color: white;
+  }
+
+
+ .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ideas {
+  background-color: #36a58d;
+  margin: 5px;
+   border-radius: 25px;
+   text-align: center;
+}
+
+a {
+    color: white;
 }

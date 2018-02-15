@@ -4,9 +4,15 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title></title>
   </head>
   <body>
+    <div class="btn btn-info">
+      <%= button_to "Home", user_path(@user), method: "get" %><br/>
+    </div>
+    <div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
 <% @users.each do |user| %>
 <ul><%= user.name %></ul>
 <% end %>

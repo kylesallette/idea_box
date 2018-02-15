@@ -22,7 +22,6 @@ class Admin::CategoriesController < Admin::BaseController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = "User created successfully."
       redirect_to admin_categories_path
     else
       render :new

@@ -2,29 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+  <header>
+    <img class=""src="https://i.imgur.com/zKoIAlP.jpg" alt="banner" height="300px" width="100%">
+  </header>
   <body>
+    <div class="btn btn-info">
+      <%= button_to "Home", user_path(@user), method: "get" %><br/>
+    </div>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="flex-container">
+      <% @ideas.each do |idea| %>
+      <div class="ideas">
+      <h2><%= link_to idea.name, user_idea_path(@user, idea) %></h2>
+      <br>
+      <span class="button-wrap">
+        <div class="button button-raised button-primary button-pill">
+          <%= link_to "Delete",  user_idea_path(@user, idea), method: "delete" %>
+        </div>
+      </span>
+      <span class="button-wrap">
+        <div class="button button-raised button-primary button-pill">
+          <%= link_to "Edit", edit_user_idea_path(@user, idea), method: "get" %>
+        </div>
+      </span>
 
-<% @ideas.each do |idea| %>
-<h2><%= link_to idea.name, user_idea_path(@user, idea) %></h2>
-<br>
-<span class="button-wrap">
-<div class="button button-raised button-primary button-pill">
-<%= link_to "Delete",  user_idea_path(@user, idea), method: "delete" %>
-</div>
-</span>
-<span class="button-wrap">
-<div class="button button-raised button-primary button-pill">
-<%= link_to "Edit", edit_user_idea_path(@user, idea), method: "get" %>
-</div>
-</span>
+      <br>
+      <% end %>
+    </div>
 
-<br>
-<% end %>
-  <div class="btn btn-info">
-<%= button_to "Home", user_path(@user), method: "get" %><br/>
-</div>
-</body>
+ </body>
 </html>

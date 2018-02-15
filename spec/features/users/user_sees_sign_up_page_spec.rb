@@ -1,11 +1,11 @@
 require 'rails_helper'
 
   describe "user starts on dashboard"  do
-    it "they see welcome page"  do
+    it "they see welcome image"  do
 
       visit '/'
 
-      expect(page).to have_content("Welcome to my wonderful Idea Box!")
+    have_css("img[src*='https://i.imgur.com/ydRkyuu.jpg']")
     end
   end
 

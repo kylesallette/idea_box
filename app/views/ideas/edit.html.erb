@@ -2,20 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
   </head>
+  <header>
+    <img class=""src="https://i.imgur.com/Q8V6tqc.jpg" alt="banner" height="300px" width="100%">
+  </header>
   <body>
-<div class="form">
-    <div class="wrapper">
-      <%= form_for [@user, @idea] do |f| %>
+    <div class="btn btn-info">
+      <%= button_to "Home", user_path(@user), method: "get" %><br/>
+    </div>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="login">
+      <div class="wrapper">
+        <%= form_for [@user, @idea] do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name, placeholder: "Idea Title*" %><br><br>
-
         <%= f.label :content %>
-        <%= f.text_area :content, placeholder: "Idea*" %><br><br>
-  <%= f.submit class: "sub-btn" %>
-<% end %>
-</body>
-</html>
+        <%= f.text_area :content, placeholder: "Idea*",:size => "38%x9%" %><br><br>
+        <%= f.submit class: "sub-btn" %>
+        <% end %>
+        <br>
+      </body>
+ </html>
