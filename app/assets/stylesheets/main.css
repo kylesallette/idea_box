@@ -47,6 +47,20 @@ body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,3
 
 }
 
+.login-5 {
+
+  background: #36a58d;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 430px;
+  margin: 20px auto 0;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+
+}
+
+
 .login h1 {
   background-image: linear-gradient(top, #f1f3f3, #d4dae0);
   border-bottom: 1px solid #a6abaf;

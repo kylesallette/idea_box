@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   </head>
   <header>
@@ -16,6 +16,7 @@
     <div id="bottom"></div>
     <div class="login-2">
       <div class="wrapper">
+        <h2> Categories </h2>
         <% @categories.each do |category| %>
         <h2><%= category.title %></h2>
         <br>
@@ -28,9 +29,14 @@
         <% end %>
         <span class="button-wrap">
           <div class="button button-raised button-primary button-pill">
-            <%= link_to "Add new category.",  new_admin_category_path(@category), method: "get" %>
+            <%= link_to "Add new category/Image.",  new_admin_category_path(@category), method: "get" %>
        </div>
      </span>
+     <span class="button-wrap">
+       <div class="button button-raised button-primary button-pill">
+       <%= link_to "Log Out", logout_path, method: :delete %>
+     </div>
+   </span>
     <div class="btn btn-info">
   </div>
 </body>
