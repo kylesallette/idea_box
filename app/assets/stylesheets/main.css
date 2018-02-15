@@ -200,3 +200,42 @@ label{
        margin-right:auto;
        width:<whatever your banner/desired width is>;
     }
+body {
+  background-color:#e3e4e5;
+}
+
+h3 {
+
+   font-family: courier;
+ }
+
+ h2 {
+
+    font-family: courier;
+    color: white;
+  }
+
+
+ .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ideas {
+  background-color: #36a58d;
+  margin: 5px;
+   border-radius: 25px;
+   text-align: center;
+}
+
+a {
+    color: white;
+}
