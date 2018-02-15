@@ -39,6 +39,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers', '~>3.1'
+  gem 'bcrypt-ruby', '~> 3.1.0'
   gem "paperclip", "~> 5.2.1"
 end
 
@@ -51,7 +52,6 @@ end
 group :production do
   gem 'pg', '~> 0.18'
   gem 'rails_12factor', group: :production
-  gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
