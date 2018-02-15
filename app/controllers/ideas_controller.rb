@@ -4,6 +4,7 @@ class IdeasController < ApplicationController
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new
     @image = Image.all
+    redirect_to root_path unless @user == current_user
   end
 
   def create
@@ -17,6 +18,7 @@ class IdeasController < ApplicationController
     @user = User.find(params[:user_id])
     @ideas = @user.ideas
     @image = Image.all
+    redirect_to root_path unless @user == current_user
   end
 
   def edit
@@ -28,7 +30,6 @@ class IdeasController < ApplicationController
    @user = User.find(params[:user_id])
    @idea = Idea.find(params[:id])
    redirect_to root_path unless @user == current_user
-  # @image = Image.find(params[:id])
   end
 
   def destroy

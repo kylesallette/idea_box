@@ -34,6 +34,19 @@ body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,3
   text-align: center;
 }
 
+.login-4 {
+
+  background: #36a58d;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  height: 400px;
+  margin: 20px auto 0;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+
+}
+
 .login h1 {
   background-image: linear-gradient(top, #f1f3f3, #d4dae0);
   border-bottom: 1px solid #a6abaf;
@@ -162,3 +175,28 @@ label{
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
 }
+
+#top, #bottom, #left, #right {
+	background: #36a58d;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+    .anchored{
+       display:block;
+       margin-left:auto;
+       margin-right:auto;
+       width:<whatever your banner/desired width is>;
+    }

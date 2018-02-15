@@ -2,26 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
     <header>
-    <img class=""src="https://i.imgur.com/tLVDqbW.jpg" alt="banner" height="300px" width="100%">
-  </header>
-<div class="login">
-<h1> Welcome, <%= @user.name.capitalize %>!</h1><br/>
-
-<%= button_to "Add a New Idea", new_user_idea_path(@user), method: "get" %><br/>
-<%= button_to "View all ideas", user_ideas_path(@user), method: "get" %><br/>
-<%= link_to "Add/Delete Category", admin_categories_path if current_user.admin? %>
-
-<span class="button-wrap">
-<div class="button button-raised button-primary button-pill">
-<%= link_to "Log Out", logout_path, method: :delete %>
-
-</div>
-</span>
-
-</div>
+      <img class=""src="https://i.imgur.com/tLVDqbW.jpg" alt="banner" height="300px" width="100%">
+    </header>
+    <div class="login">
+      <h1> Welcome, <%= @user.name.capitalize %>!</h1><br/>
+      <%= button_to "Add a New Idea", new_user_idea_path(@user), method: "get" %><br/>
+      <%= button_to "View all ideas", user_ideas_path(@user), method: "get" %><br/>
+      <%= link_to "Add/Delete Category", admin_categories_path if current_user.admin? %>
+      <span class="button-wrap">
+        <div class="button button-raised button-primary button-pill">
+          <%= link_to "Log Out", logout_path, method: :delete %>
+        </div>
+      </span>
+    </div>
 </html>
