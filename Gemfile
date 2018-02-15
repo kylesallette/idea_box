@@ -39,7 +39,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers', '~>3.1'
-  gem 'bcrypt', '~>3.1.11'
+  gem "bcrypt"  
   gem "paperclip", "~> 5.2.1"
 end
 
