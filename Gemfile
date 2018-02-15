@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'bcrypt', '~>3.1.7'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -39,7 +40,6 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers', '~>3.1'
-  gem 'bcrypt', '~>3.1.7'
   gem "paperclip", "~> 5.2.1"
 end
 
@@ -47,6 +47,11 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+end
+
+group :production do
+  gem 'pg', '~> 0.18'
+  gem 'rails_12factor', group: :production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
