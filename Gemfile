@@ -39,7 +39,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers', '~>3.1'
-  gem 'bcrypt', '~>3.1.7'
+  gem 'bcrypt', '~>3.1.11'
   gem "paperclip", "~> 5.2.1"
 end
 
@@ -52,7 +52,7 @@ end
 group :production do
   gem 'pg', '~> 0.18'
   gem 'rails_12factor', group: :production
-end 
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
