@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <title></title>
   </head>
+  <header>
+  <img class=""src="https://i.imgur.com/zKoIAlP.jpg" alt="banner" height="300px" width="100%">
+</header>
   <body>
 <h3><%= @idea.name %></h3>
 <%= @idea.content %><br>
-<%= image_tag(@idea.images[0].url, size: "150x150") %>
+<p><% @idea.images.each do |image| %></p>
+<%= image_tag(image.url, size: "150x150" ) %><br/>
+<% end %>
+</div>
   <div class="btn btn-info">
 <%= button_to "Back to ideas", user_ideas_path(@user), method: "get" %><br/>
 </div>
