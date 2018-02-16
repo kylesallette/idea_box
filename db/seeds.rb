@@ -18,3 +18,10 @@ Image.create!(name: "leaf", url: "https://i.imgur.com/sFuzBo6.jpg" )
 Image.create!(name: "pond", url: "https://i.imgur.com/YalzVCE.jpg" )
 Image.create!(name: "bulb", url: "https://i.imgur.com/JYitq2w.jpg" )
 Image.create!(name: "plant", url: "https://i.imgur.com/WXFWwFc.jpg" )
+
+
+Category.create!(title: "art")
+Category.create!(title: "exercise")
+Category.create!(title: "dreams")
+Category.create!(title: "projects")
+Category.create!(title: "crafts")

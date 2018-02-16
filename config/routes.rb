@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :ideas
     end
     namespace :admin do
+      resources :images
     resources :categories, only: [:index, :new, :destroy, :edit, :update, :create]
-    resources :images
   end
 end

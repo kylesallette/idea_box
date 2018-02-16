@@ -23,8 +23,17 @@
         <%= f.text_field :name, placeholder: "Idea Title*" %><br><br>
         <%= f.label :content %>
         <%= f.text_area :content, placeholder: "Idea*",:size => "38%x9%" %><br><br>
+          <p> Category select  <%= f.collection_select(:categories_id, Category.all, :id, :title) %></p>
         <%= f.submit class: "sub-btn" %>
+
+        <div class="flex-container">
+          <div>
+        <% Image.all.each do |image| %>
+        <%= image_tag(image.url, :class=> "img-circular")%>
+        <%= check_box_tag("image_url[]",image.id) %>
         <% end %>
-        <br>
+        <% end %>
+      </div>
+    </div>
       </body>
  </html>
