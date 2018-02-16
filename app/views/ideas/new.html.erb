@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   </head>
   <div class="anchored">
     <header>
@@ -25,7 +26,6 @@
       <%= f.text_area :content , placeholder: "Idea*",:size => "60%x12%"  %><br>
       <%= f.submit class: "sub-btn" %>
       <p> Category select  <%= f.collection_select(:categories_id, Category.all, :id, :title) %></p>
-      <%= link_to "Add image", admin_categories_path if current_user.admin? %>
     </div>
     <% Image.all.each do |image| %>
     <%= image_tag(image.url, :class=> "img-circular")%>

@@ -24,11 +24,14 @@ class IdeasController < ApplicationController
   def edit
     @user = User.find(params[:user_id])
     @idea = Idea.find(params[:id])
+    @categories = Category.all
+    @images = Image.all
   end
 
   def show
    @user = User.find(params[:user_id])
    @idea = Idea.find(params[:id])
+
    redirect_to root_path unless @user == current_user
   end
 
@@ -38,8 +41,10 @@ class IdeasController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:user_id])
     @idea = Idea.find(params[:id])
+    @category = Category.all
+    @user = User.find(params[:user_id])
+    @idea.image_ids = params[:image_url]
     @idea.update(idea_params)
     redirect_to user_idea_path(@user, @idea)
   end
@@ -47,7 +52,8 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:content, :name, :image, :category_id, :image_ids)
+    params.require(:idea).permit(:content, :name, :image, :category_id, {:image_ids => []})
   end
+
 
 end
